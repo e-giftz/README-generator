@@ -20,5 +20,6 @@ If the user enters the license for this application, then the badge is created a
 * URL of GitHub repository containing the code: https://github.com/e-giftz/README-generator
 
 ## Video of the User Flow through the App
+The video walkthrough  of the app can be found [here](/Develop/assets/README-app-display.mp4)
 
-![App Walkthrough ](assets/)
+![App Walkthrough ](/Develop/assets/README-app-walkthrough.gif)

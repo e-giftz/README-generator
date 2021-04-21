@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
     const licenseLink = 'https://spdx.org/licenses/' + license.license + '.html'
     if (license.license !== "") {
-        return `![license-link](<${licenseLink}>)`;
+        return `[Link to License Details](<${licenseLink}>)`;
     } else {
         return "";
     }
