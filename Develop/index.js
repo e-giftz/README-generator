@@ -67,11 +67,6 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What can be done if there is  an issue?',
-        name: 'questions',
-    },
-    {
-        type: 'input',
         message: 'Please enter your GitHub username:',
         name: 'username',
     },
@@ -81,7 +76,6 @@ const questions = [
         name: 'email',
     }
 ];
-
 // TODO: Create a function to write README file
 //function writeToFile(fileName, data) {}
 const writeToFile = util.promisify(fs.writeFile);
@@ -89,10 +83,9 @@ const writeToFile = util.promisify(fs.writeFile);
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then((response) => writeToFile('ReadME.md', generateMarkdown(response)))
-    .then(() => console.log('Successfully saved to ReadME.md!'))
+    .then((response) => writeToFile('README.md', generateMarkdown(response)))
+    .then(() => console.log('Successfully saved to README.md!'))
     .catch((err) => console.error(err));
-    //writeToFile('README.md', generateMarkdown(response),
 }
 // Function call to initialize app
 init();

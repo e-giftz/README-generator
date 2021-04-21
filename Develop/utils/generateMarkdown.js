@@ -8,7 +8,6 @@ function renderLicenseBadge(license) {
         return "";
     }
 }
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
@@ -25,13 +24,12 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) { 
     //const licenseSection = 'https://spdx.org/licenses/' + license.license + '.html'
     if (license.license !== "") {
-        return `This application is covered by the ${license.license} license.<br />![badge](<https://img.shields.io/badge/license-${license.license}-important.svg>)
+        return `This application is covered under the ${license.license} license.<br />![badge](<https://img.shields.io/badge/license-${license.license}-important.svg>)
         <br /> `;   
     } else {
         return "";
     }
 }
-
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
@@ -69,11 +67,9 @@ ${data.contributing}
 ${data.testApp}
 
 ## Questions
-${data.questions}<br />
-<br />    
-Find me on GitHub: [${data.username}](https://github.com/${data.username})<br />
-<br />
-✉️ Email me with any questions: ${data.email}`;
+Please email or reach me on GitHub if you have any questions<br />
+>Find me on GitHub: [${data.username}]('https://github.com/${data.username}')<br />
+>✉️ Email me with any additional questions: ${data.email}`;
 }
 
 module.exports = generateMarkdown;
